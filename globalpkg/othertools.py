@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import os
 import re

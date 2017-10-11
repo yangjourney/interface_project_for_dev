@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-__author__ = 'laifuyu'
+__author__ =''
 
 import datetime
 import json
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     logger.info('正在读取运行模式配置')
     if sys.argv[1] == '1':
-        run_mode_conf = RunModeConfig('./config/runmodeconfig_test.conf')
+        run_mode_conf = RunModeConfig('./config/runmodeconfig_test_bak.conf')
     elif sys.argv[1] == '2':
         run_mode_conf = RunModeConfig('./config/runmodeconfig_release.conf')
     run_mode = int(run_mode_conf.get_run_mode())
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
     logger.info('接口测试已执行完成，正在关闭数据库连接')
     testdb.close()
-    saofudb.close()
+  #  saofudb.close()
 
     
     if 4 != run_mode:

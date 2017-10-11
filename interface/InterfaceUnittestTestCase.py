@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laiyu'
+__author__ =''
 
 import urllib.request
 import json

@@ -9,7 +9,7 @@ __doc__ = """The pyh.py module is the core of the PyH package. PyH lets you
 generate HTML tags from within your python code.
 See http://code.google.com/p/pyh/ for documentation.
 """
-__author__ = "Emmanuel Turlay <turlay@cern.ch>"
+__author__ ='' "Emmanuel Turlay <turlay@cern.ch>"
 __version__ = '$Revision: 63 $'
 __date__ = '$Date: 2010-05-21 03:09:03 +0200 (Fri, 21 May 2010) $'
 

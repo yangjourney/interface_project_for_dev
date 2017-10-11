@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import configparser
 import sys
@@ -25,7 +25,7 @@ class MyDB:
         self.charset = config[db]['charset']
 
         try:
-            self.dbconn = pymysql.connect(host=self.host, port=self.port, user=self.user, password=self.passwd, database=self.db_name, charset=self.charset)
+            self.dbconn = pymysql.connect(host=self.host, port=3306, user=self.user, password=self.passwd, database=self.db_name, charset=self.charset)
         except Exception as e:
             logger.error('初始化数据连接失败：%s' % e)
             sys.exit()

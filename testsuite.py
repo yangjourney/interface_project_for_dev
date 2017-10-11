@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import time
 from globalpkg.log import logger
@@ -101,7 +101,7 @@ class TestSuite:
             sql_insert = 'INSERT INTO '+testcase_report_tb +'(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime)' \
                          ' VALUES(%s, %s, %s, %s, %s, %s, %s, %s)'
             testplan = '无计划'
-            data = (executed_history_id, testcase_id, testcase_name, testsuite_name, testplan, self.project_name, 'Block','0000-00-00 00:00:00')
+            data = (executed_history_id, testcase_id, testcase_name, testsuite_name, testplan, self.project_name, 'Block',executed_history_id)
             logger.info('记录测试用例到测试用例报表')
             testdb.execute_insert(sql_insert, data)
 

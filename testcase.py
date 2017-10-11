@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import json
 import time
@@ -47,17 +47,17 @@ class TestCase:
                          ' VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
             if step_action.find('步骤类型')  != -1 and step_action.find('执行用例') != -1: # 待执行步骤为用例
                 data = (executed_history_id, self.testcase_id, self.testcase_name, testplan, self.testproject, step_id, step_number, '无', '无', '无', '无',
-                step_action, expected_results, 'Block', '', '0000-00-00 00:00:00')
+                step_action, expected_results, 'Block', '', executed_history_id)
                 logger.info('记录测试步骤到测试步骤报告表')
                 testdb.execute_insert(sql_insert, data)
             elif step_action.find('步骤类型') != -1 and (step_action.find('执行sql') != -1 or step_action.find('执行SQL') != -1): #: # 待执行步骤为sql
                 data = (executed_history_id, self.testcase_id, self.testcase_name, testplan, self.testproject, step_id, step_number, '', '', testdb.get_host(), testdb.get_port(),
-                    step_action, expected_results, 'Block', '', '0000-00-00 00:00:00')
+                    step_action, expected_results, 'Block', '', executed_history_id)
                 logger.info('记录测试步骤到测试步骤报告表')
                 testdb.execute_insert(sql_insert, data)
             elif  step_action.find('步骤类型') == -1: # 待执行步骤为普通用例步骤
                 data = (executed_history_id, self.testcase_id, self.testcase_name, testplan, self.testproject, step_id, step_number, '', protocol_all, host_all, port_all,
-                    step_action, expected_results, 'Block', '', '0000-00-00 00:00:00')
+                    step_action, expected_results, 'Block', '', executed_history_id)
                 logger.info('记录测试步骤到测试步骤报告表')
                 testdb.execute_insert(sql_insert, data)
 				

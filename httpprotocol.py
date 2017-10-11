@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import urllib.request
 import http.cookiejar
@@ -26,7 +26,7 @@ class MyHttp:
         urllib.request.install_opener(opener)
 
         # 添加以支持ssl # 注意，发起的请求要为443端口
-        https_sslv3_handler = urllib.request.HTTPSHandler(context=ssl.SSLContext(ssl.PROTOCOL_SSLv2))
+        https_sslv3_handler = urllib.request.HTTPSHandler(context=ssl.SSLContext(ssl.PROTOCOL_SSLv23))
         opener = urllib.request.build_opener(https_sslv3_handler)
         urllib.request.install_opener(opener)
 

@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
-__author__ = 'laifuyu'
+__author__ =''
 import logging
 from logging.handlers import RotatingFileHandler
 from logging.handlers import TimedRotatingFileHandler
@@ -56,7 +56,7 @@ class LogSignleton(object):
             self.logger.addHandler(rt_file_handler)
             self.logger.setLevel(self.log_level_in_logfile)
 
-logsignleton = LogSignleton('./config/logconfig.conf')
+logsignleton = LogSignleton('D:/workspace/interface_project_for_dev/config/logconfig.conf')
 logger = logsignleton.get_logger()
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:GBK -*-
-__author__ = 'shouke'
+__author__ =''
 
 import configparser
 import smtplib

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-__author__ = 'laifuyu'
+__author__ =''
 
 import time
 
@@ -65,7 +65,7 @@ class TestPlan:
 
             sql_insert = 'INSERT INTO '+testcase_report_tb +'(executed_history_id, testcase_id, testcase_name, testsuit, testplan, project, runresult, runtime)' \
                          ' VALUES(%s, %s, %s, %s, %s, %s, %s, %s)'
-            data = (executed_history_id, testcase_id, str(testcase_name), testsuite_name, self.testplan_name, self.testproject, 'Block', '')
+            data = (executed_history_id, testcase_id, str(testcase_name), testsuite_name, self.testplan_name, self.testproject, 'Block', executed_history_id)
             logger.info('记录测试用例到测试用例报表')
             testdb.execute_insert(sql_insert, data)
 
