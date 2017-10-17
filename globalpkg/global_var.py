@@ -11,7 +11,7 @@ from globalpkg.mydb import MyDB
 from globalpkg.mytestlink import TestLink
 from globalpkg.othertools import OtherTools
 
-#__all__=['global_headers', 'global_openId','global_serial', 'global_protocol_version','global_product_version','saofudb','testdb','mytestlink','other_tools','executed_history_id', 'testcase_report_tb', 'case_step_report_tb']
+__all__=['global_headers', 'global_openId','global_serial', 'global_protocol_version','global_product_version','saofudb','testdb','mytestlink','other_tools','executed_history_id', 'testcase_report_tb', 'case_step_report_tb']
 
 # 根据自己的实际需要进行合理的调整
 if sys.argv[1] == '1':
@@ -38,17 +38,17 @@ testcase_report_tb = 'testcase_report_tb'
 case_step_report_tb = 'case_step_report_tb'
 
 # 请求都携带的公用请求头、请求参数
-#if sys.argv[1] == '1': # 测试环境的全局变量
-#    global_headers = {'saofu.client.test.saofu.cn':{}, 'm.test.saofu.cn':{'Cookie':'10549840601068216320=ous64uFCCLMyXYDJ-MkNilyCI5CY'}}
-#    global_serial = '10549840601068216320'
-#    global_openId = 'ous64uFCCLMyXYDJ-MkNilyCI5CY'
-#    global_product_version = '3.2.12C'
-#    global_protocol_version = '4.0'
-#elif sys.argv[1] == '2': # 预发布环境的全局变量
-#    global_headers = {'m.test.saofu.cn':{'Cookie':'10549840601068216320=ous64uFCCLMyXYDJ-MkNilyCI5CY'}}
-#    global_serial = '10549840601068216320'
-#    global_openId = 'ous64uFCCLMyXYDJ-MkNilyCI5CY'
-#    global_product_version = '3.2.12C'
-#    global_protocol_version = '4.0'
+if sys.argv[1] == '1': # 测试环境的全局变量
+    global_headers = {'10.2.5.139:8080':{}, '10.2.5.139:8080':{'Cookie':'10549840601068216320=ous64uFCCLMyXYDJ-MkNilyCI5CY'}}
+    global_serial = '10549840601068216320'
+    global_openId = 'ous64uFCCLMyXYDJ-MkNilyCI5CY'
+    global_product_version = '3.2.12C'
+    global_protocol_version = '4.0'
+elif sys.argv[1] == '2': # 预发布环境的全局变量
+    global_headers = {'10.2.5.139:8080':{'Cookie':'10549840601068216320=ous64uFCCLMyXYDJ-MkNilyCI5CY'}}
+    global_serial = '10549840601068216320'
+    global_openId = 'ous64uFCCLMyXYDJ-MkNilyCI5CY'
+    global_product_version = '3.2.12C'
+    global_protocol_version = '4.0'
 
 # 自己自由扩展和更改

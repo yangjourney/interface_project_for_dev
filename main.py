@@ -66,6 +66,7 @@ if __name__ == '__main__':
     elif sys.argv[1] == '2':
         run_mode_conf = RunModeConfig('./config/runmodeconfig_release.conf')
     run_mode = int(run_mode_conf.get_run_mode())
+    #run_mode = 1
 
     logger.info('正在运行全局初始化用例……')
     global_case_id_list = run_mode_conf.get_global_case_id_list()

@@ -18,11 +18,11 @@ class InterfaceUnittestTestCase(MyUnittestTestCase):
     outputs_list = []
     def test_interface_of_urlencode(self): # 针对请求体为url编码的：b'id=1318&password=e10adc3949ba59abbe56e057f20f883e'
         headers = self.headers.copy()
-        for host in global_headers:
+        for host in __all__.global_headers:
             # 判断该host下是否有全局请求头
             host_of_interface = self.http.get_host()
             if host == host_of_interface:
-               headers.update(global_headers[host])
+               headers.update(__all__.global_headers[host])
         self.http.set_header(headers)
 
         method = self.method.lower()
